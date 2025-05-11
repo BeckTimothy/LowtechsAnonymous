@@ -1,6 +1,4 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-
 
 export default function Home() {
 
@@ -44,12 +42,17 @@ export default function Home() {
     };
 
     return (
-        <div className={styles.page}>
-            <main className={styles.main}>
-                <h1 className={styles.titleFont}>ALA!</h1>
-                <p className={styles.tagLine}>Nerds Seeking Sobriety From Tech Illiteracy</p>
-                <p className={styles.dateText}>Next Event: {getNextAlaEvent().toString()}</p>
-            </main>
+        <div>
+            <div className={styles.scanline}/>
+            <div className={styles.crt}/>
+            <div className={styles.page}>
+                <main className={styles.main}>
+                    <h1 className={styles.titleFont}>ALA!</h1>
+                    <p className={styles.tagLine}>Nerds Seeking Sobriety From Tech Illiteracy</p>
+                    <p className={styles.dateText}>Next Event: {getNextAlaEvent().toString()}</p>
+
+                </main>
+            </div>
         </div>
     );
 }
