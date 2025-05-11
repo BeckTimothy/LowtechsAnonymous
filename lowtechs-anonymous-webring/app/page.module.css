@@ -166,3 +166,23 @@ a.secondary {
     filter: invert();
   }
 }
+
+
+.titleFont {
+  font-family: "VT323", monospace;
+  text-align: center;
+  font-size: 5rem;
+  color: limegreen;
+}
+.tagLine {
+  font-family: "VT323", monospace;
+  text-align: center;
+  font-size: 1.5rem;
+  color: limegreen;
+}
+.dateText {
+  font-family: "VT323", monospace;
+  text-align: center;
+  font-size: 1.5rem;
+  color: limegreen;
+}
