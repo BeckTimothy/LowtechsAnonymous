@@ -40,6 +40,13 @@ export default function Home() {
         let arr = str.split(' ').slice(0,5);
         return arr.join(' ');
     };
+    const getTagLine = () =>{
+        const options = [
+            "Basement-born. Signal-bound. Tech unfiltered. Minds unmatched."
+        ];
+
+        return options[Math.floor(Math.random() * (options.length - 1))]
+    }
 
     return (
         <div>
@@ -48,9 +55,16 @@ export default function Home() {
             <div className={styles.page}>
                 <main className={styles.main}>
                     <h1 className={styles.titleFont}>ALA!</h1>
-                    <p className={styles.tagLine}>Nerds Seeking Sobriety From Tech Illiteracy</p>
-                    <p className={styles.dateText}>Next Event: {getNextAlaEvent().toString()}</p>
-
+                    {/*<p className={styles.tagLine}>Nerds Seeking Sobriety From Tech Illiteracy</p>*/}
+                    <p className={styles.dateText}>
+                        {getTagLine()}
+                        <br/><br/><br/>
+                        Next Event:
+                        <br/>
+                        {getNextAlaEvent().toString()}
+                        <br/><br/>
+                        Do <i>YOU</i> have an invite?
+                    </p>
                 </main>
             </div>
         </div>
