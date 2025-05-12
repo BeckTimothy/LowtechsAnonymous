@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local';
 
-const vt323 = localFont({ src: './fonts/VT323-Regular.ttf' })
+const vt323 = localFont({ src: './_fonts/VT323-Regular.ttf' })
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
