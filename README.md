@@ -8,6 +8,7 @@ Site TODO List:
 - [ ] webring redirect **/next**
 - [ ] webring redirect **/last**
 - [x] webring crawler/health maintainer scripts **api/webring**
+- [ ] build SSR-proof crawler/health maintainer scripts w/ puppeteer or similar
 - [ ] wayback machine crawler/ auto archiver **/archive**
 - [ ] webring description/sitelist **/webring**
 - [ ] Poll members for blog/sites to include in ring
