@@ -1,6 +1,6 @@
 export default async function Page() {
     const fromSite = "testSite.com"
-    //Get site health else update site loop
+    //Get site health else webring site loop
 
     //Get Next Site from DB
 
