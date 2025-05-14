@@ -1,28 +1,62 @@
 import webringData from '../../_data/webring.json'
 import {SiteObject} from "@/app/lib/definitions";
-import fs from 'fs';
+import {db} from '@/app/lib/db';
+
+async function updateSite(client: any, siteObj: SiteObject) {
+
+    const updatedSite = await client.query(`
+                UPDATE sites
+                SET lastUpdated = $2,
+                    isValid     = $3,
+                    isLive      = $4
+                WHERE siteName = $1
+        `,
+        [siteObj.siteName, siteObj.lastUpdated, siteObj.isValid, siteObj.isLive]
+    );
+
+    return updatedSite
+}
+
+async function updateSites(client: any, siteList: SiteObject[]) {
+
+    const updatedSites = await Promise.all(
+        siteList.map((site: SiteObject) => {
+            return client.query(
+                `
+                    UPDATE sites
+                    SET lastUpdated = $2,
+                        isValid = $3,
+                        isLive = $4
+                    WHERE siteName = $1
+                `,
+                [site.siteName, site.lastUpdated, site.isValid, site.isLive]
+            );
+        })
+    );
+    return updatedSites
+}
+
+async function getSites(client: any) {
+    const sitesData = await client.query(`
+                SELECT * FROM sites
+        `
+    );
+
+    return sitesData.rows;
+}
 
 const newSiteList: SiteObject[] = [];
 
-const updateWebringJson = async (json: SiteObject[]) => {
-    fs.writeFile('./app/_data/webring.json', JSON.stringify(json), 'utf8', (err) => {
-        if (err) {
-            console.error('Error writing file:', err);
-            return;
-        }
-        console.log('File written successfully!');
-    });
-}
-const recursivelyUpdateSites = async (sites: SiteObject[]) => {
+const recursivelyUpdateSites = async (client: any, sites: SiteObject[]) => {
     let sitesList = sites
     let siteToUpdate = sitesList.shift();
 
-    if(siteToUpdate){
+    if (siteToUpdate) {
         //if last updated is within last 10 minutes, don't make needless api calls
-        if(siteToUpdate.lastUpdated !== null && ( new Date().valueOf() - siteToUpdate.lastUpdated ) < 600000){
+        if (siteToUpdate.lastUpdated !== null && (new Date().valueOf() - siteToUpdate.lastUpdated) < 600000) {
             newSiteList.push(siteToUpdate)
-            sitesList.length > 0 ? await recursivelyUpdateSites(sitesList) : await updateWebringJson(newSiteList);
-        } else{//else get site html
+            sitesList.length > 0 ? await recursivelyUpdateSites(client, sitesList) : await updateSites(client, newSiteList);
+        } else {//else get site html
             let url = 'https://' + siteToUpdate?.siteName
 
             //check if site is reachable
@@ -44,36 +78,53 @@ const recursivelyUpdateSites = async (sites: SiteObject[]) => {
             }).finally(() => {
                 //push updated site to list and recur or write to disk
                 newSiteList.push(siteToUpdate)
-                return sitesList.length > 0 ? recursivelyUpdateSites(sitesList) : updateWebringJson(newSiteList);
+                return sitesList.length > 0 ? recursivelyUpdateSites(client, sitesList) : updateSites(client, newSiteList);
             })
         }
     }
 }
-async function updateWebring() {
+
+async function updateWebring(client: any) {
     //make list of sites needing to be updated
     let json = webringData;
 
     //recursively loop through list updating each site
-    await recursivelyUpdateSites(json);
+    await recursivelyUpdateSites(client, json);
 
     return true
 }
 
 export async function GET() {
+    const client = await db.connect();
     try {
-        return Response.json( webringData );
-    } catch (error) {
-        return Response.json({ error }, { status: 500 });
+        return Response.json(await getSites(client));
+    } catch (error: unknown) {
+        console.error('Seeding failed:', error);
+        await client.query(`ROLLBACK`);
+        if (error instanceof Error) {
+            return Response.json({ error: error.message }, { status: 500 });
+        } else {
+            return Response.json({ error: 'An unknown error occurred' }, { status: 500 });
+        }
     }
 }
+
 export async function POST(req: Request) {
-    //const json = await req.json().then(data => {
-    //    return data
-    //})
-    //let url = typeof json.url === "string" ? json.url.toLowerCase() : null;
+    const client = await db.connect();
+
     try {
-        return Response.json(await updateWebring());
-    } catch (e) {
-        return Response.json({ e }, { status: 500 });
+        await client.query(`BEGIN`);
+        await updateWebring(client)
+        await client.query(`COMMIT`);
+
+        return Response.json({ message: 'Database updated successfully' });
+    } catch (error: unknown) {
+        console.error('Seeding failed:', error);
+        await client.query(`ROLLBACK`);
+        if (error instanceof Error) {
+            return Response.json({ error: error.message }, { status: 500 });
+        } else {
+            return Response.json({ error: 'An unknown error occurred' }, { status: 500 });
+        }
     }
 }

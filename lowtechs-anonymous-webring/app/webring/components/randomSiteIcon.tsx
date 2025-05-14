@@ -5,9 +5,7 @@ import SiteIcon2 from '../../icons/liveSiteIcons/siteIcon2.svg'
 import SiteIcon3 from '../../icons/liveSiteIcons/siteIcon3.svg'
 import SiteIcon4 from '../../icons/liveSiteIcons/siteIcon4.svg'
 import styles from '../../page.module.css';
-import deadSite from "@/app/icons/deadSite.svg";
-import Image from 'next/image';
-import {FunctionComponent} from "react";
+
 
 
 export default async function randomSiteIcon() {

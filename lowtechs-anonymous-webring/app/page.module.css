@@ -198,7 +198,7 @@ a.secondary {
 .DisabledSiteName {
   font-family: "VT323", monospace;
   font-size: 2.5rem;
-  color: #696969;
+  color: #292929;
   animation: disabledTextShadow 4s infinite;
 }
 .SiteDescription {
@@ -216,7 +216,7 @@ a.secondary {
 .DisabledSiteStatus {
   font-family: "VT323", monospace;
   font-size: 3.5rem;
-  color: #696969;
+  color: #292929;
   animation: disabledTextShadow 4s infinite;
   padding-left: 1rem;
 }
@@ -255,7 +255,7 @@ a.secondary {
   animation: iconShadow 4s infinite;
 }
 .disabledIcon {
-  filter: brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%);
+  filter: brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%);
   height: 3.5rem;
   width: 3.5rem;
   animation: disabledIconShadow 4s infinite;
@@ -539,67 +539,67 @@ a.secondary {
 
 @keyframes disabledIconShadow {
   0% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(0.4389924193300864px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.4389924193300864px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(0.4389924193300864px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.4389924193300864px 0 1px rgba(255, 0, 80, 0.15));
   }
   5% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(2.7928974010788217px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.7928974010788217px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(2.7928974010788217px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.7928974010788217px 0 1px rgba(255, 0, 80, 0.15));
   }
   10% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(0.02956275843481219px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.02956275843481219px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(0.02956275843481219px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.02956275843481219px 0 1px rgba(255, 0, 80, 0.15));
   }
   15% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(0.40218538552878136px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.40218538552878136px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(0.40218538552878136px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.40218538552878136px 0 1px rgba(255, 0, 80, 0.15));
   }
   20% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(3.4794037899852017px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-3.4794037899852017px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(3.4794037899852017px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-3.4794037899852017px 0 1px rgba(255, 0, 80, 0.15));
   }
   25% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(1.6125630401149584px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-1.6125630401149584px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(1.6125630401149584px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-1.6125630401149584px 0 1px rgba(255, 0, 80, 0.15));
   }
   30% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(0.7015590085143956px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.7015590085143956px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(0.7015590085143956px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.7015590085143956px 0 1px rgba(255, 0, 80, 0.15));
   }
   35% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(3.896914047650351px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-3.896914047650351px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(3.896914047650351px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-3.896914047650351px 0 1px rgba(255, 0, 80, 0.15));
   }
   40% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(3.870905614848819px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-3.870905614848819px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(3.870905614848819px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-3.870905614848819px 0 1px rgba(255, 0, 80, 0.15));
   }
   45% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(2.231056963361899px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.231056963361899px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(2.231056963361899px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.231056963361899px 0 1px rgba(255, 0, 80, 0.15));
   }
   50% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(0.08084290417898504px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.08084290417898504px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(0.08084290417898504px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.08084290417898504px 0 1px rgba(255, 0, 80, 0.15));
   }
   55% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(2.3758461067427543px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.3758461067427543px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(2.3758461067427543px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.3758461067427543px 0 1px rgba(255, 0, 80, 0.15));
   }
   60% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(2.202193051050636px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.202193051050636px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(2.202193051050636px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.202193051050636px 0 1px rgba(255, 0, 80, 0.15));
   }
   65% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(2.8638780614874975px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.8638780614874975px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(2.8638780614874975px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.8638780614874975px 0 1px rgba(255, 0, 80, 0.15));
   }
   70% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(0.48874025155497314px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.48874025155497314px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(0.48874025155497314px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.48874025155497314px 0 1px rgba(255, 0, 80, 0.15));
   }
   75% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(1.8948491305757957px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-1.8948491305757957px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(1.8948491305757957px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-1.8948491305757957px 0 1px rgba(255, 0, 80, 0.15));
   }
   80% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(0.0833037308038857px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.0833037308038857px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(0.0833037308038857px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.0833037308038857px 0 1px rgba(255, 0, 80, 0.15));
   }
   85% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(0.09769827255241735px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.09769827255241735px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(0.09769827255241735px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-0.09769827255241735px 0 1px rgba(255, 0, 80, 0.15));
   }
   90% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(3.443339761481782px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-3.443339761481782px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(3.443339761481782px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-3.443339761481782px 0 1px rgba(255, 0, 80, 0.15));
   }
   95% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(2.1841838852799786px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.1841838852799786px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(2.1841838852799786px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.1841838852799786px 0 1px rgba(255, 0, 80, 0.15));
   }
   100% {
-    filter:  brightness(0) saturate(100%) invert(36%) sepia(5%) saturate(1054%) hue-rotate(216deg) brightness(96%) contrast(81%) drop-shadow(2.6208764473832513px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.6208764473832513px 0 1px rgba(255, 0, 80, 0.15));
+    filter:  brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(3%) hue-rotate(37deg) brightness(97%) contrast(96%) drop-shadow(2.6208764473832513px 0 1px rgba(0, 30, 255, 0.25)) drop-shadow(-2.6208764473832513px 0 1px rgba(255, 0, 80, 0.15));
   }
 }
 @keyframes iconShadow {

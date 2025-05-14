@@ -3,9 +3,6 @@ import styles from '../../page.module.css';
 import DeadSite from '../../icons/deadSite.svg';
 import randomSiteIcon from './randomSiteIcon'
 
-
-//live site icons
-
 export default function siteHealthDisplay(siteObj: SiteObject) {
     let isDisabled = !siteObj.isLive || !siteObj.isValid;
 
@@ -20,7 +17,6 @@ export default function siteHealthDisplay(siteObj: SiteObject) {
             </div>
         );
     };
-    //randomSiteIcon()
 
     return (
         <div className={styles.SiteObjectCard}>
