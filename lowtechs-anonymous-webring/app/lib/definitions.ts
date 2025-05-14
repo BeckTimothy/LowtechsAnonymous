@@ -1,6 +1,6 @@
 export type SiteObject = {
     siteName: string;
-    lastUpdated: number | null;
+    lastUpdated: number;
     isLive: boolean;
     isValid: boolean;
 };
