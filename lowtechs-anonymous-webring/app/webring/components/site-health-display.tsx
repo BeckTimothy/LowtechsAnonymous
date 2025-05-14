@@ -3,6 +3,7 @@ import styles from '../../page.module.css';
 import DeadSite from '../../icons/deadSite.svg';
 import randomSiteIcon from './randomSiteIcon'
 
+
 //live site icons
 
 export default function siteHealthDisplay(siteObj: SiteObject) {
@@ -10,6 +11,7 @@ export default function siteHealthDisplay(siteObj: SiteObject) {
 
     let dateArr = new Date(siteObj.lastUpdated).toTimeString().split(' ');
     let dateString = dateArr[0];
+
 
     const deadSiteSvg = () => {
         return (

@@ -9,6 +9,7 @@ import deadSite from "@/app/icons/deadSite.svg";
 import Image from 'next/image';
 import {FunctionComponent} from "react";
 
+
 export default async function randomSiteIcon() {
 
 
