@@ -10,9 +10,9 @@ Site TODO List:
 - [x] Webring crawler/health maintainer scripts **/api/webring**
 - [x] Webring description/sitelist **/webring**
 - [x] Make **/webring** mobile accessible
-- [ ] Make Banner for **/webring**
+- [x] Make Banner for **/webring**
 - [x] Set up serverside db
-- [ ] Configure db to run on restart
+- [x] Configure db to run on restart
 - [x] Configure ui to query db instead of json 
 - [ ] Build SSR-proof crawler/health maintainer scripts w/ puppeteer or similar
 - [ ] Wayback machine crawler/ auto archiver **/archive**
