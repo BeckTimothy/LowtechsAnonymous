@@ -9,12 +9,11 @@ Site TODO List:
 - [x] Webring redirect **/last**
 - [x] Webring crawler/health maintainer scripts **/api/webring**
 - [x] Webring description/sitelist **/webring**
-- [ ] Make **/webring** mobile accessible
+- [x] Make **/webring** mobile accessible
 - [ ] Make Banner for **/webring**
-- [ ] Set up serverside db
+- [x] Set up serverside db
 - [ ] Configure db to run on restart
-- [ ] Configure ui to query db instead of json 
-- [ ] Replace ui references to json data w/ DB requests
+- [x] Configure ui to query db instead of json 
 - [ ] Build SSR-proof crawler/health maintainer scripts w/ puppeteer or similar
 - [ ] Wayback machine crawler/ auto archiver **/archive**
 - [ ] Poll members for blog/sites to include in ring

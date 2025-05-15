@@ -37,12 +37,19 @@ async function updateSites(client: any, siteList: SiteObject[]) {
 }
 
 async function getSites(client: any) {
-    const sitesData = await client.query(`
+    const data = await client.query(`
                 SELECT * FROM sites
         `
     );
 
-    return sitesData.rows;
+    const siteData: SiteObject[] = data.rows.map((row: any) => ({
+        siteName: row.sitename,
+        lastUpdated: row.lastupdated,
+        isValid: row.isvalid,
+        isLive: row.islive,
+    }));
+
+    return siteData;
 }
 
 const newSiteList: SiteObject[] = [];

@@ -1,8 +1,13 @@
-import webringData from '../_data/webring.json';
 import siteHealthDisplay from './components/site-health-display'
 import styles from '../page.module.css'
+import {useEffect, useState} from "react";
+import {SiteObject} from "@/app/lib/definitions";
+import {fetchSites} from "@/app/lib/data";
 
 export default async function Page() {
+    const webringData: SiteObject[] = await fetchSites()
+
+    //console.log(webringData)
 
     return (
         <div>

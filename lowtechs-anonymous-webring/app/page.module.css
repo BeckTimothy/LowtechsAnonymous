@@ -238,7 +238,6 @@ a.secondary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 65vw;
   max-width: 600px;
   align-items: center;
 }
@@ -264,6 +263,37 @@ a.secondary {
   display: flex;
   align-items: center;
 }
+
+@media only screen and (max-width: 800px) {
+
+  .SiteWrapper {
+    align-items: start;
+  }
+  .SiteObjectCard {
+    flex-direction: column-reverse;
+    align-items: start;
+    margin: 1.5em;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .SiteStatus {
+    padding-left: 0;
+  }
+  .DisabledSiteStatus{
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 801px) {
+
+  .SiteObjectCard {
+    width: 65vw;
+  }
+
+}
+
+
+
+
 .scanline {
   width: 100vw;
   height: 100px;
