@@ -1,6 +1,6 @@
 # Lowtechs Anonymous
 
-Smol project for a cluster of nerds.
+Albuquerque Lowtechs Anonymous (ALA!) is an underground hacker collective for cyber-security professionals and tech enthusiasts. This site is a webpage to represent Lowtechs Anonymous and serve some of our projects.
 
 Site TODO List:
 - [x] Discord redirect **/discord**
