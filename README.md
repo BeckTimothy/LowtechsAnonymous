@@ -14,6 +14,9 @@ Site TODO List:
 - [x] Set up serverside db
 - [x] Configure db to run on restart
 - [x] Configure ui to query db instead of json 
+- [ ] Modernize requirements for being considered online
+- [ ] Build Online SVG icons
+- [ ] Make /webring sites into clickable links
 - [ ] Build SSR-proof crawler/health maintainer scripts w/ puppeteer or similar
 - [ ] Wayback machine crawler/ auto archiver **/archive**
 - [ ] Poll members for blog/sites to include in ring
