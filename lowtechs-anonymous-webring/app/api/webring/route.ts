@@ -60,7 +60,7 @@ const recursivelyUpdateSites = async (client: any, sites: SiteObject[]) => {
 
     if (siteToUpdate) {
         //if last updated is within last 10 minutes, don't make needless api calls
-        if (siteToUpdate.lastUpdated !== null && (new Date().valueOf() - siteToUpdate.lastUpdated) < 600000) {
+        if (siteToUpdate.lastUpdated !== null && (new Date().valueOf() - Number(siteToUpdate.lastUpdated)) < 600000) {
             newSiteList.push(siteToUpdate)
             sitesList.length > 0 ? await recursivelyUpdateSites(client, sitesList) : await updateSites(client, newSiteList);
         } else {//else get site html
