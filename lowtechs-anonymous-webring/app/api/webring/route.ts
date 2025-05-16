@@ -115,8 +115,8 @@ export async function GET() {
         } else {
             return Response.json({ error: 'An unknown error occurred' }, { status: 500 });
         }
-    }finally {
-        client.release(); // ✅ Important: always release the connection
+    } finally {
+        client.release();
     }
 }
 
@@ -137,7 +137,7 @@ export async function POST(req: Request) {
         } else {
             return Response.json({ error: 'An unknown error occurred' }, { status: 500 });
         }
-    }finally {
-        client.release(); // ✅ Important: always release the connection
+    } finally {
+        client.release();
     }
 }
