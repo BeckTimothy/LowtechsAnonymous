@@ -2,7 +2,6 @@ import {SiteObject} from "@/app/lib/definitions";
 import styles from '../../page.module.css';
 import DeadSite from '../../icons/deadSite.svg';
 import LiveSite from '../../icons/online.svg';
-import randomSiteIcon from './randomSiteIcon'
 
 export default function siteHealthDisplay(siteObj: SiteObject) {
     let isDisabled = !siteObj.isLive || !siteObj.isValid;
@@ -37,13 +36,13 @@ export default function siteHealthDisplay(siteObj: SiteObject) {
             </div>
         );
     };
-
+    const siteURL = "https://"+siteObj.siteName;
     return (
         <div className={styles.SiteObjectCard}>
             <div className={styles.SiteObjectCardFlex}>
                     {isDisabled ? deadSiteSvg() : liveSiteSvg()}
                 <div>
-                    <p className={isDisabled ? styles.DisabledSiteName : styles.SiteName}>{siteObj.siteName}</p>
+                    <a href={siteURL}><p className={isDisabled ? styles.DisabledSiteName : styles.SiteName} >{siteObj.siteName}</p></a>
                     <p className={isDisabled ? styles.DisabledSiteDescription : styles.SiteDescription}>{getTimeString(siteObj)}</p>
                 </div>
             </div>
