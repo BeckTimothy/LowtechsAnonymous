@@ -251,6 +251,7 @@ a.secondary {
   filter: brightness(0) saturate(100%) invert(72%) sepia(16%) saturate(7494%) hue-rotate(72deg) brightness(99%) contrast(82%);
   height: 3.5rem;
   width: 3.5rem;
+  shape-rendering: geometricprecision;
   animation: iconShadow 4s infinite;
 }
 .titleIcon {

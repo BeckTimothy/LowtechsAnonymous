@@ -34,7 +34,7 @@ export async function middleware(request: NextRequest) {
             }
         }
         //redirect to next site
-        return NextResponse.rewrite(new URL('/', request.url))
+        return NextResponse.rewrite(new URL('/webring', request.url))
     }
     if (request.nextUrl.pathname.startsWith('/prev/')) {
         //get siteName from pathname
@@ -58,7 +58,7 @@ export async function middleware(request: NextRequest) {
         }
 
         //redirect to previous site or lander. not sure.
-        return NextResponse.rewrite(new URL('/', request.url))
+        return NextResponse.rewrite(new URL('/webring', request.url))
     }
 
     // No redirect found, continue without redirecting
