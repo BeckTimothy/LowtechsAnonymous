@@ -52,7 +52,7 @@ async function getSites(client: any) {
     return siteData;
 }
 
-const newSiteList: SiteObject[] = [];
+let newSiteList: SiteObject[] = [];
 
 const recursivelyUpdateSites = async (client: any, sites: SiteObject[]) => {
     let sitesList = sites
@@ -60,7 +60,7 @@ const recursivelyUpdateSites = async (client: any, sites: SiteObject[]) => {
 
     if (siteToUpdate) {
         //if last updated is within last 10 minutes, don't make needless api calls
-        if (siteToUpdate.lastUpdated !== null && (new Date().valueOf() - Number(siteToUpdate.lastUpdated)) < 600000) {
+        if (Date.now() - Number(siteToUpdate.lastUpdated) < 600000) {
             newSiteList.push(siteToUpdate)
             sitesList.length > 0 ? await recursivelyUpdateSites(client, sitesList) : await updateSites(client, newSiteList);
         } else {//else get site html
@@ -76,11 +76,15 @@ const recursivelyUpdateSites = async (client: any, sites: SiteObject[]) => {
                 }
             ).then(data => {
                 //update isValid if page html contains webring urls
-                let containsPrev = data.includes(`lowtechsanonymous.com/last/${siteToUpdate.siteName}`);
-                let containsNext = data.includes(`lowtechsanonymous.com/next/${siteToUpdate.siteName}`);
 
+                let prevString = `lowtechsanonymous.com/prev/${siteToUpdate.siteName}`;
+                let nextString = `lowtechsanonymous.com/next/${siteToUpdate.siteName}`;
+                let midString = `lowtechsanonymous.com/webring`;
+                let containsPrev = data.includes(prevString);
+                let containsNext = data.includes(nextString);
+                let containsMid = data.includes(midString);
+                siteToUpdate.isValid = containsNext && containsPrev && containsMid;
 
-                siteToUpdate.isValid = containsNext && containsPrev
                 //update lastUpdated with new unix date
                 siteToUpdate.lastUpdated = new Date().valueOf();
 
@@ -93,9 +97,7 @@ const recursivelyUpdateSites = async (client: any, sites: SiteObject[]) => {
     }
 }
 
-async function updateWebring(client: any) {
-    //make list of sites needing to be updated
-    let json = webringData;
+async function updateWebring(client: any, json: SiteObject[]) {
 
     //recursively loop through list updating each site
     await recursivelyUpdateSites(client, json);
@@ -125,7 +127,8 @@ export async function POST(req: Request) {
 
     try {
         await client.query(`BEGIN`);
-        await updateWebring(client)
+        const json: SiteObject[] = await getSites(client);
+        await updateWebring(client, json)
         await client.query(`COMMIT`);
 
         return Response.json({ message: 'Database updated successfully' });
