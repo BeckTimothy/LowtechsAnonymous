@@ -15,8 +15,7 @@ export default function siteHealthDisplay(siteObj: SiteObject) {
         }else if(timeDiff > 86400000){
             timeString = "Checked over 24 hours ago.";
         }else {
-            let dateArr = new Date(Number(siteObj.lastUpdated)).toTimeString().split(' ');
-            let dateString = dateArr[0];
+            let dateString = new Date(Number(siteObj.lastUpdated)).toLocaleTimeString("en-US", { timeZone: "America/Denver" });
             timeString = "Checked at " + dateString;
         }
         return timeString;
