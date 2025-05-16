@@ -1,8 +1,9 @@
 import {db} from "@/app/lib/db";
 import {SiteObject} from "@/app/lib/definitions";
 export async function fetchSites() {
+    const client = await db.connect();
     try {
-        const data = await db.query(`SELECT * FROM sites`);
+        const data = await client.query(`SELECT * FROM sites`);
 
         const siteData: SiteObject[] = data.rows.map((row: any) => ({
             siteName: row.sitename,
@@ -15,5 +16,7 @@ export async function fetchSites() {
     } catch (error) {
         console.error("Database Error:", error);
         throw new Error("Failed to fetch the site list.");
+    }finally {
+        client.release(); // ✅ Important: always release the connection
     }
 }

@@ -78,6 +78,8 @@ const recursivelyUpdateSites = async (client: any, sites: SiteObject[]) => {
                 //update isValid if page html contains webring urls
                 let containsPrev = data.includes(`lowtechsanonymous.com/last/${siteToUpdate.siteName}`);
                 let containsNext = data.includes(`lowtechsanonymous.com/next/${siteToUpdate.siteName}`);
+
+
                 siteToUpdate.isValid = containsNext && containsPrev
                 //update lastUpdated with new unix date
                 siteToUpdate.lastUpdated = new Date().valueOf();
@@ -113,6 +115,8 @@ export async function GET() {
         } else {
             return Response.json({ error: 'An unknown error occurred' }, { status: 500 });
         }
+    }finally {
+        client.release(); // ✅ Important: always release the connection
     }
 }
 
@@ -133,5 +137,7 @@ export async function POST(req: Request) {
         } else {
             return Response.json({ error: 'An unknown error occurred' }, { status: 500 });
         }
+    }finally {
+        client.release(); // ✅ Important: always release the connection
     }
 }
