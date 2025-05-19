@@ -52,7 +52,7 @@ export async function middleware(request: NextRequest) {
         }
 
         for(let i=0;i<sortedArr.length;i++){
-            if(sortedArr[i].isLive && sortedArr[i].isValid){
+            if(sortedArr[i].isLive && sortedArr[i].isValid && sortedArr[i].siteName !== site){
                 return NextResponse.redirect(new URL('https://' + sortedArr[i].siteName))
             }
         }
