@@ -3,7 +3,6 @@
 Albuquerque Lowtechs Anonymous (ALA!) is an underground hacker collective for cyber-security professionals and tech enthusiasts. This site is a webpage to represent Lowtechs Anonymous and serve some of our projects.
 
 Site TODO List: 
-- [ ] Automate update scripts
 - [ ] Modernize requirements for being considered online
 - [ ] Build specified update api
 - [ ] Build update neighbors api
