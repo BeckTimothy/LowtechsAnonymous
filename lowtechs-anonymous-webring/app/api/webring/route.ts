@@ -67,7 +67,7 @@ const recursivelyUpdateSites = async (client: any, sites: SiteObject[]) => {
             let url = 'https://' + siteToUpdate?.siteName
 
             //check if site is reachable
-            let response = fetch(url)
+            let response = fetch(url, {'headers':{'User-Agent': 'ALABot/1.0'}})
             await response.then(response => {
                     //update isLive if page html is obtainable
                     siteToUpdate.isLive = response.status === 200
