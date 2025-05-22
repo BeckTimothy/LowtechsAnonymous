@@ -4,7 +4,7 @@ Albuquerque Lowtechs Anonymous (ALA!) is an underground hacker collective for cy
 
 ### Purpose:
 
-This site is a webpage to represent Lowtechs Anonymous, display the next event date, redirect users to important information, and serve some of our projects.
+This site is a lightweight next.js app using css animations to represent Lowtechs Anonymous's eclectic hacker nature, display the next event date, using next middleware to redirect users to important information, and using postgres and node.js to maintain and serve some of our projects.
 
 ### Sitemap: 
 
