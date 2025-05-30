@@ -1,3 +1,4 @@
+export const revalidate = 3600;
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -29,11 +30,11 @@ export default function Home() {
                 offset = -2;
                 break;
         }
-        //Find Last Thrusday of this month
+        //Find Last Thursday of this month
         let lastThursday = new Date(lastDayOfMonth.getFullYear(), lastDayOfMonth.getMonth()+1, offset, 18);
-        //If last thursday is after today, find next month's event
+        //If last thursday of this month is before today, find next month's event
         if(lastThursday < today){
-            return getNextAlaEvent(new Date(today.getFullYear(), today.getMonth()+2, 1));
+            return getNextAlaEvent(new Date(today.getFullYear(), today.getMonth()+1, 1));
         }
         //convert date to string and return shortened string
         let str = lastThursday.toString();
