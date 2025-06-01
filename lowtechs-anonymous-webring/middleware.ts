@@ -1,3 +1,4 @@
+export const revalidate = 900;
 import { NextResponse, NextRequest } from 'next/server'
 import { get } from '@vercel/edge-config'
 import webringData from './app/_data/webring.json'
