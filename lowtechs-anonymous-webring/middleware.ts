@@ -1,13 +1,10 @@
+import {SiteObject} from "@/app/lib/definitions";
+
 export const revalidate = 900;
 import { NextResponse, NextRequest } from 'next/server'
 import { get } from '@vercel/edge-config'
-import webringData from './app/_data/webring.json'
+//import webringData from './app/_data/webring.json'
 import {sort} from "next/dist/build/webpack/loaders/css-loader/src/utils";
-
-type RedirectEntry = {
-    destination: string
-    permanent: boolean
-}
 
 export async function middleware(request: NextRequest) {
     if (request.nextUrl.pathname.startsWith('/discord')) {
@@ -16,6 +13,7 @@ export async function middleware(request: NextRequest) {
     if (request.nextUrl.pathname.startsWith('/event')) {
         return NextResponse.redirect(new URL('https://www.eventbrite.com/e/albuquerque-lowtechs-anonymous-tickets-798974804147'))
     }
+    const webringData: SiteObject[] = await fetchSitesWithRevalidation();
     if (request.nextUrl.pathname.startsWith('/next/')) {
         //get siteName from pathname
         let site = request.nextUrl.pathname.substring(6).toLowerCase()
@@ -65,7 +63,15 @@ export async function middleware(request: NextRequest) {
     // No redirect found, continue without redirecting
     return NextResponse.next()
 }
+async function fetchSitesWithRevalidation(): Promise<SiteObject[]> {
+    const res = await fetch("http://localhost:3000/api/webring", {
+        next: { revalidate: 15 }
+    } as any);
 
+    if (!res.ok) throw new Error("Failed to fetch");
+
+    return res.json();
+}
 export const config = {
     matcher: ['/next/:path*', '/prev/:path*', '/discord/:path*', '/event/:path*'],
 }
