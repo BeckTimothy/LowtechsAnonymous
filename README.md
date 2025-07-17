@@ -20,4 +20,4 @@ This site is a lightweight next.js app using css animations to represent Lowtech
 - [ ] Build update neighbors api
 - [ ] Build SSR-proof crawler/health maintainer scripts w/ puppeteer or similar
 - [ ] Wayback machine crawler/ auto archiver **/archive**
-
+- [ ] Stylize text on mouseover and add event link to home
