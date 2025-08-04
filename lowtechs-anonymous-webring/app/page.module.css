@@ -189,6 +189,10 @@ a.secondary {
   color: limegreen;
   animation: textShadow 4s infinite;
 }
+.inviteLink {
+  text-decoration-thickness: 3px !important;
+  text-decoration: underline;
+}	
 .SiteName {
   font-family: "VT323", monospace;
   font-size: 2.5rem;

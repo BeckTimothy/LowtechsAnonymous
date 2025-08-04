@@ -64,7 +64,7 @@ export default function Home() {
                         <br/>
                         {getNextAlaEvent().toString()}
                         <br/><br/>
-                        Do <i>YOU</i> have an invite?
+                        Do <i>YOU</i> have an <a href="/discord" rel="nofollow" className={styles.inviteLink}>invite?</a>
                     </p>
                 </main>
             </div>
