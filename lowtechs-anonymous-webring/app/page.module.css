@@ -293,6 +293,46 @@ a.secondary {
   color: limegreen;
   animation: textShadow 4s infinite;
 }
+.ClippyTitleText {
+  text-align: end;
+  font-family: "VT323", monospace;
+  font-size: 2rem;
+  color: limegreen;
+  animation: textShadow 4s infinite;
+}
+.ClippyTitleText2 {
+  text-align: start;
+  font-family: "VT323", monospace;
+  font-size: 2rem;
+  color: limegreen;
+  animation: textShadow 4s infinite;
+}
+.ClippyBannerWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+}
+.ClippyRejectWrapper {
+  display: block;
+  align-content: flex-end;
+  text-align: end;
+}
+.ClippyEmbraceWrapper {
+  display: block;
+  align-content: flex-end;
+}
+.ClippyTitleIcon {
+  height: 4rem;
+  /*filter: blur(0.04rem) brightness(0) saturate(100%) invert(56%) sepia(67%) saturate(525%) hue-rotate(71deg) brightness(90%) contrast(99%);*/
+  filter: brightness(0) saturate(100%) invert(72%) sepia(16%) saturate(7494%) hue-rotate(72deg) brightness(99%) contrast(82%);
+  width: 6rem;
+  shape-rendering: geometricprecision;
+  animation: iconShadow 4s infinite;
+}
 .BannerWebringWrapper {
  display: block;
 }
@@ -307,7 +347,10 @@ a.secondary {
   display: flex;
   align-items: center;
 }
-
+.ClippyBannerIconWrapper {
+ display: flex;
+ align-items:center;
+}
 
 
 
@@ -328,6 +371,9 @@ a.secondary {
   .BannerIconWrapper {
     display: none;
   }
+  .ClippyEmbraceWrapper {
+    display: none;
+  }	  
   .iconWrapper {
     justify-content: center;
   }

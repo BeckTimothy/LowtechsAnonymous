@@ -1,6 +1,6 @@
 export const revalidate = 3600;
 import styles from "./page.module.css";
-
+import Clippy from "./icons/smolClippy.svg"
 export default function Home() {
 
     const getNextAlaEvent = (today = new Date()) => {
@@ -49,6 +49,14 @@ export default function Home() {
         return options[Math.floor(Math.random() * (options.length - 1))]
     }
 
+    const clippySvg = () => {
+        return (
+            <div className={styles.ClippyBannerIconWrapper}>
+                <Clippy  className={styles.ClippyTitleIcon} />
+            </div>
+	);
+    };
+
     return (
         <div>
             <div className={styles.scanline}/>
@@ -67,6 +75,16 @@ export default function Home() {
                         Do <i>YOU</i> have an <a href="/discord" rel="nofollow" className={styles.inviteLink}>invite?</a>
                     </p>
                 </main>
+		<div className={styles.ClippyBannerWrapper}>
+            	    <div className={styles.ClippyRejectWrapper}>
+               	 	<h3 className={styles.ClippyTitleText}>Reject Modernity</h3>
+            	    </div>
+            		{clippySvg()}
+            	    <div className={styles.ClippyEmbraceWrapper}>
+               	 	<h3 className={styles.ClippyTitleText2}>Embrace Clippy&nbsp;&nbsp;</h3>
+            	    </div>
+	        </div>
+
             </div>
         </div>
     );
