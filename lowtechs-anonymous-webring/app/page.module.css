@@ -390,7 +390,7 @@ a.secondary {
 }
 .ManifestoBody > h3{
   padding-bottom: 1rem;
-  margin-left: -1rem;
+  margin-left: -0.75rem;
 }
 .ManifestoBody > ul{
   padding-left: 1.5rem;
@@ -398,7 +398,10 @@ a.secondary {
 .RepData {
   display: inline-block;
 }
-
+.blogDate {
+  font-size: 1rem;
+  padding-left:2rem;
+}
 
 
 
