@@ -12,12 +12,11 @@ This site is a lightweight next.js app using css animations to represent Lowtech
 - `@/event` Redirects to the ALA! eventbrite page
 - `@/discord` Redirects to the ALA! discord server invite
 - `@/webring` Webring status page, displays the current status of sites registered for the webring
-
+- `@/clippy` A manifesto touching on the modern web and privacy
 
 ### TODO List: 
-- [ ] Modernize requirements for being considered online
+- [ ] Modernize requirements for webring clients being considered online
 - [ ] Build specified update api
 - [ ] Build update neighbors api
 - [ ] Build SSR-proof crawler/health maintainer scripts w/ puppeteer or similar
 - [ ] Wayback machine crawler/ auto archiver **/archive**
-- [ ] Stylize text on mouseover and add event link to home
