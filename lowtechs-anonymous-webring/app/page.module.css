@@ -352,6 +352,29 @@ a.secondary {
  align-items:center;
 }
 
+.Manifesto {
+  font-family: "VT323", monospace;
+  color: limegreen;
+  max-width: 40em;
+  font-size: 1.5em;
+  padding: 0 1rem 0 2rem;
+  animation: textShadow 4s infinite;
+}
+.ManifestoBody {
+  padding: 1.5rem 0 2.5rem 0;
+}
+.ManifestoBody > h3{
+  padding-bottom: 1rem;
+  margin-left: -1rem;
+}
+.ManifestoBody > ul{
+  padding-left: 1.5rem;
+}	
+.RepData {
+  display: inline-block;
+}
+
+
 
 
 
@@ -416,29 +439,30 @@ a.secondary {
           rgba(0, 0, 0, 0.1) 100%
   );
   opacity: 0.1;
-  position: absolute;
-  bottom: 100%;
+  position: fixed;
+  top: -100px;
+  left: 0;
   animation: scanline 7s linear infinite;
 }
 @keyframes scanline {
   0% {
-    bottom: 100%;
+    top: -100px;
   }
   80% {
-    bottom: 100%;
+    top: -100px;
   }
   100% {
-    bottom: 0%;
+    top: 100vh;
   }
 }
 .crt:before {
   content: " ";
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  width:100vw;
+  height: 100vh;
   background: linear-gradient(
           to bottom,
           rgba(18, 16, 16, 0) 50%,
