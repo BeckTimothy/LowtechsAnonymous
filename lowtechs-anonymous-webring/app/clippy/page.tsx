@@ -1,6 +1,6 @@
 import styles from '../page.module.css';
 import {SiteObject} from "@/app/lib/definitions";
-//import ClippyBanner from "@/app/webring/components/clippy-banner";
+import ClippyBanner from "@/app/clippy/components/clippy-banner";
 
 
 export default async function Page() {
@@ -10,8 +10,8 @@ export default async function Page() {
         <div>
             <div className={styles.scanline}/>
             <div className={styles.crt}/>
-
             <main className={styles.SiteWrapper}>
+            <ClippyBanner />
             <div className={styles.Manifesto}>
                 <h2>¡A La Verga, Not A Manifesto!</h2>
                 <div className={styles.ManifestoBody}>
@@ -38,7 +38,7 @@ export default async function Page() {
 
                     <p>Clippy just wanted to help.<br/>
                         <br/>
-                    Clippy didn’t track you across the city. <br/>Clippy didn’t collect and sell data on who enters or exits your home. <br/>Clippy didn’t collect and sell data on your web traffic, texts, emails, phone calls. <br/>Clippy wasn’t trying to decide which advertisements to serve to you. <br/>Clippy didn’t ask for age verification, ID, or your location. <br/>Clippy didn’t have ulterior motives, he just wanted to help.<br/>
+                    Clippy didn’t track you across the city. <br/>Clippy didn’t collect and sell data on who enters or exits your home. <br/>Clippy didn’t collect and sell data on your web traffic, texts, emails, phone calls. <br/>Clippy didn’t try to decide which advertisements to serve you. <br/>Clippy didn’t ask for age verification, ID, or your location. <br/>Clippy didn’t have ulterior motives, he just wanted to help.<br/>
                         <br/>
                     Embrace Clippy by changing your profile picture across every service to Clippy, and tell everyone: “Clippy just wanted to help.”</p>
                 </div>

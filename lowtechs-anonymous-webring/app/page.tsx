@@ -75,7 +75,7 @@ export default function Home() {
                         Do <i>YOU</i> have an <a href="/discord" rel="nofollow" className={styles.inviteLink}>invite?</a>
                     </p>
                 </main>
-		<div className={styles.ClippyBannerWrapper}>
+		<a href="/clippy" className={styles.ClippyBannerWrapper}>
             	    <div className={styles.ClippyRejectWrapper}>
                	 	<h3 className={styles.ClippyTitleText}>Reject Modernity</h3>
             	    </div>
@@ -83,7 +83,7 @@ export default function Home() {
             	    <div className={styles.ClippyEmbraceWrapper}>
                	 	<h3 className={styles.ClippyTitleText2}>Embrace Clippy&nbsp;&nbsp;</h3>
             	    </div>
-	        </div>
+	        </a>
 
             </div>
         </div>
