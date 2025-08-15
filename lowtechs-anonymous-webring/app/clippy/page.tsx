@@ -15,7 +15,7 @@ export default async function Page() {
             <div className={styles.Manifesto}>
                 <h2>¡A La Verga, Not A Manifesto!</h2>
                 <div className={styles.ManifestoBody}>
-                    <h3>&gt;The Web of old</h3>
+                    <h3>&gt;The Web of Old</h3>
                     <p>Growing up, our parents told us to never put our real names, addresses, photos, or any identifying information on the internet. This was a common sentiment shared by everyone that used the internet in a time when few did.<br/>
                         <br/>
                     Everyone who had anything to say shared their interests and hobbies on custom websites, geocities, or topic relevant forums. The internet was a constructive place filled with makers, tinkerers, artists, and hackers. Filled with people who cared about sharing their passions, and people who wanted to learn. It was a place for learners, builders, and sharers.<br/>
