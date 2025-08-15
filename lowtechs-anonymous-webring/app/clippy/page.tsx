@@ -15,7 +15,7 @@ export default async function Page() {
             <div className={styles.Manifesto}>
                 <h2>¡A La Verga, Not A Manifesto!</h2>
                 <div className={styles.ManifestoBody}>
-                    <h3>>The Web of old</h3>
+                    <h3>&gt;The Web of old</h3>
                     <p>Growing up, our parents told us to never put our real names, addresses, photos, or any identifying information on the internet. This was a common sentiment shared by everyone that used the internet in a time when few did.<br/>
                         <br/>
                     Everyone who had anything to say shared their interests and hobbies on custom websites, geocities, or topic relevant forums. The internet was a constructive place filled with makers, tinkerers, artists, and hackers. Filled with people who cared about sharing their passions, and people who wanted to learn. It was a place for learners, builders, and sharers.<br/>
@@ -23,7 +23,7 @@ export default async function Page() {
                     With these builders emerged web services which aimed to offer valuable services to consumers, solve problems, and make our lives easier. Consumers were ecstatic to pay for these new opportunities and tools, and builders were eager to make the tools best they could be.</p>
                 </div>
                 <div className={styles.ManifestoBody}>
-                    <h3>>Internet Enshittified</h3>
+                    <h3>&gt;Internet Enshittified</h3>
 
                     <p>Web services have eroded. Through the centralization of vast internet boards into the same five apps that users ceaselessly doomscroll. Through the deliberate removal of features within those internet services for them just to emerge as additional cost features. Through the faltering of consumer protections. Through the inclusion of fingerprinting, tracking pixels, and canvas elements in every site that feed advertisers, information brokers, and intelligence agencies private user data. Through legislation of anti-encryption acts that seek to silence speech, punish dissent, and control narrative. Through the anti-privacy legislation which seeks to track everyone everywhere and everything they do. Web services have eroded into ones that only serve as tools to build capital for corporations.<br/>
                         <br/>
@@ -34,16 +34,16 @@ export default async function Page() {
                     Wake up. It’s 2025 and privacy is dead; human interaction is a commodity, and corporations crave your attention.</p>
                 </div>
                 <div className={styles.ManifestoBody}>
-                    <h3>>Embrace Clippy</h3>
+                    <h3>&gt;Embrace Clippy</h3>
 
                     <p>Clippy just wanted to help.<br/>
                         <br/>
-                    Clippy didn’t track you across the city. <br/>Clippy didn’t collect and sell data on who enters or exits your home. <br/>Clippy didn’t collect and sell data on your web traffic, texts, emails, phone calls. <br/>Clippy didn’t try to decide which advertisements to serve you. <br/>Clippy didn’t ask for age verification, ID, or your location. <br/>Clippy didn’t have ulterior motives, he just wanted to help.<br/>
+                    Clippy didn’t track you across the city. <br/>Clippy didn’t collect and sell data on who enters or exits your home. <br/>Clippy didn’t collect and sell data on your web traffic, texts, emails, phone calls. <br/>Clippy wasn’t trying to decide which advertisements to serve to you. <br/>Clippy didn’t ask for age verification, ID, or your location. <br/>Clippy didn’t have ulterior motives, he just wanted to help.<br/>
                         <br/>
                     Embrace Clippy by changing your profile picture across every service to Clippy, and tell everyone: “Clippy just wanted to help.”</p>
                 </div>
                 <div className={styles.ManifestoBody}>
-                    <h3>>Reject Modernity</h3>
+                    <h3>&gt;Reject Modernity</h3>
                     <p>Revolt against modern services.<br/><br/></p>
                     <ul>
                         <li>Uninstall your apps and delete your accounts.</li>
@@ -57,7 +57,7 @@ export default async function Page() {
                     </ul>
                 </div>
                 <div className={styles.ManifestoBody }>
-                    <h3>>Call your Representatives</h3>
+                    <h3>&gt;Call your Representatives</h3>
 
                     <p>Phone calls are the most effective way to influence your representatives. <br/><br/>Here’s why:</p>
                     <ul>
