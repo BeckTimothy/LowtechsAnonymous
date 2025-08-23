@@ -2,10 +2,8 @@ import styles from '../page.module.css';
 import {SiteObject} from "@/app/lib/definitions";
 import ClippyBanner from "@/app/clippy/components/clippy-banner";
 
-
-export default async function Page() {
+export default function Page() {
     
-
     return (
         <div>
             <div className={styles.scanline}/>
@@ -14,56 +12,73 @@ export default async function Page() {
             <ClippyBanner />
             <div className={styles.Manifesto}>
                 <h2>¡A La Verga, Not A Manifesto!</h2>
-                <p className={styles.blogDate}>Revision 2 - 2025-08-15</p>
+                <p className={styles.blogDate}>Originally Published:2025-08-15</p>
                 <div className={styles.ManifestoBody}>
                     <h3>&gt;The Web of Old</h3>
-                    <p>Growing up, our parents told us to never put our real names, addresses, photos, or any identifying information on the internet. This was a common sentiment shared by everyone that used the internet in a time when few did. With privacy, through anonymity, and less-so but still so behind pseudonyms; ideas flourish, free from bias and identity-based discrimination. A five year old, an eighty year old, a black American, a white Mexican, a billionaire, and a homeless person could all share ideas online and each would be interacted with equality and by the credibility and quality of their ideas. Anonymity is the great equalizer.<br/>
+                    <p>In the early days of the internet, we were repeatedly cautioned against posting any identifying information online, this was a common sentiment shared by netizens in the time before the web saw widespread adoption. Those early pioneers came to realize that through their anonymity their ideas could flourish, free from bias and identity-based discrimination. A child, a senior citizen, people from all races and creeds, billionaires and those living in abject poverty could all share their thoughts and woes, and each would be judged not by these traits but by the credibility, content and quality of their contributions. <b>Anonymity is the great equalizer.</b><br/>
                         <br/>
-                    Everyone who had anything to say shared their interests and hobbies on custom websites, geocities, or topic relevant forums. The internet was a constructive place filled with makers, tinkerers, artists, and hackers whose ideas transcend their identity. The internet brimmed with people who cared about sharing their passions, and people who wanted to learn. It was a place for learners, builders, and sharers; for people like us. I don’t intend to look back with rose-tinted glasses at an internet built by people like us; it still is built by people like us. This isn’t about a change in time, it’s about a change in minds. The internet still can be a tool to share ideas free from the ire of society, without bias or burden, to share passions and learn; but it takes builders. <br/>
+                    People far and wide shared their interests and hobbies on personal websites, GeoCities, blogs, niche underground forums. The internet was a constructive place filled with makers, tinkerers, artists, and hackers whose ideas transcended their identity; brimming with passionate individuals who wanted to learn and share their experience with the world. <br/>
                         <br/>
-                    With past builders emerged apps which aimed to offer valuable services to consumers, solve problems, and make our lives easier. Consumers were ecstatic to pay for these new opportunities and tools, and builders were eager to make the tools the best they could be.</p>
+                    The web was built for people like us. Mega conglomerates, data brokers, intelligence communities now writhe their heads like a great information hydra, set on consuming all individualism and creativity then algorithmically use it to sell you cheap garbage, track your every movement, and wage information warfare on the very neurons of your brain itself.<br/>
+                    <br/>
+                    This isn't about a change in time, it's about a change in minds. A change in behavior. A change in priority. A change in <b>us.</b> The internet still can be a tool to share ideas free from the ire of society, without bias or burden, to share passions and learn; but it takes builders. Real builders. Not corporate autocrats set on extracting every piece of value they can from you. <b>The internet needs you.</b>
+                    </p>
                 </div>
                 <div className={styles.ManifestoBody}>
                     <h3>&gt;Internet Enshittified</h3>
 
-                    <p>Along the way some of these builders sold out or became corrupted by greed. Web services eroded. Through the centralization of vast internet boards into the same five apps that users ceaselessly doomscroll. Through the deliberate removal of features within those internet services for them just to reemerge as additional cost features. Through the faltering of consumer protections making way for profit driven legislation. Through the inclusion of fingerprinting, tracking pixels, and canvas elements in every site that feeds advertisers, information brokers, and intelligence agencies valuable private user data. Through legislation of anti-encryption acts that seek to silence speech, punish dissent, and control narrative. Through the anti-privacy legislation which seeks to track everyone everywhere and everything they do. Web services have eroded into ones that only serve as tools to build capital for corporations, no longer about building something that helps people.<br/>
+                    <p>Along the way these builders of the internet became corrupted by greed and special interest groups pushed traffic to their broad commercial platforms. Web services eroded. Through the centralization of vast internet boards into the same five apps that users ceaselessly doomscroll. Through the deliberate removal of free features within those internet services for them just to reemerge as doubleplusungood, subscription-only features. Through the faltering of consumer protections making way for profit-driven legislation. Through the inclusion of fingerprinting, tracking pixels, and canvas elements within every site that feed advertisers, information brokers, and intelligence agencies private user data. Through legislation of anti-encryption acts that seek to silence speech, punish dissent, and control narrative. Through the anti-privacy legislation which seeks to track everyone everywhere and everything they do. Web services have eroded into vile daemons that serve only as tools to build capital for corporations, no longer about building something that adds value, but one that extracts and exploits.<br/>
                         <br/>
-                    The City of Albuquerque has over 10,000 video feeds pushed through the Real-Time Crime Center. None of this data is stored by our City/State, it’s stored by private businesses. Our State and City are paying multiple private businesses gobs of money to track our population as they move through the city. Those private businesses are able to leverage that information however they want. You may think that APD will be able to track criminals who victimize you across the city and arrest them, but they don’t. They won’t, they won’t even respond. Advertisers, however, will track you across the city. This loss of privacy doesn’t help you, it harms you.<br/>
+                    The City of Albuquerque has over 9,000 video feeds pushed through the Real-Time Crime Center. None of this data is stored by our city, it's stored by private businesses with vested interests in tracking your activity. Our local government pays these corporations, these clandestine data brokers, millions of dollars to track our population as they move through the city. These corporations possess the capability to leverage that information however they want. <b>You are their product.</b> The city claims that the purpose of these cameras is to track criminals, and to prevent crime. While this may be the state's official statement on the all-seeing eye they're manufacturing, the real beneficiaries of this mass surveillance system are Advertisers. They track you across the city. They know where you shop. They know where you work. They know where your children go to school. <b>They know where you live.</b> This loss of privacy doesn't help you; it harms you.<br/>
                         <br/>
-                    The UK just passed their Online Safety Act requiring online services to require ID to use certain features. Some US states have passed similar legislation. Australia, Canada, and other countries are pushing for similar legislation. Corporations in the Intelligence, Social Media, and Advertising industries are salivating at these opportunities and lobbying for these changes which erode the privacy of users everywhere, not just in the UK. You think the Tea app users whose IDs are sitting on my desktop, whose IDs are freely available to download for all, wanted that? This loss of privacy doesn’t protect children, it doesn’t protect you. It harms you.<br/>
+                    The UK recently passed the "Online Safety Act", which requires ordinary citizens to upload photographic IDs to access certain websites and applications. While this is sold to the public under the guise of protecting children, the truth is it's about control and surveillance. Some of the services affected by the OSA include Discord, Reddit, Spotify, X/Twitter, and Bluesky. Some US states have already passed similar legislation, and many are in the process of drafting even more of these privacy-eroding laws into existence. Corporations in the Intelligence, social media, and advertising industries salivate at these opportunities and spend billions of dollars lobbying your representatives for these changes which erode your privacy.<br/>
                         <br/>
-                    Wake up, it’s 2025 and privacy is dying; human interaction is a commodity, and corporations crave your attention. Don’t let privacy die, for if it is lost, it can’t be reclaimed.</p>
+                    <b>Wake up, 2025.</b> Wake up and smell the foul amalgamation of private corporate interests, black market data brokers, and global intelligence agencies who have wormed their way into every crevice of the net as we know it. You will consume product, you will own nothing, and you will be happy.<br/>
+                        <br/></p>
+                        <div className={styles.inlineWrapper}>
+                            <span></span><span></span>
+                            <span><b>YOU</b></span>
+                            <span><b>ARE</b></span>
+                            <span><b>HERE</b></span>
+                            <span></span><span></span>
+                        </div><p>
+                        <br/>
+                        <br/>
+                    There are many ways you can impede the theft and destruction of your privacy. You can contribute to freedom. You can advocate for consumer protections. You can own your net stack. It starts with <b>learning,</b> <b>building,</b> and <b>doing</b> something.
+                    </p>
                 </div>
                 <div className={styles.ManifestoBody}>
                     <h3>&gt;Reject Modernity</h3>
                     <p>Revolt against modern services.<br/><br/></p>
                     <ul>
-                        <li>Uninstall apps and delete your accounts.</li>
-                        <li>Replace apps with open-source or self-hosted alternatives.</li>
                         <li>Degoogle yourself.</li>
                         <li>Switch to Linux.</li>
                         <li>Block telemetry with custom DNS or PiHole.</li>
-                        <li>Block Shorts, Insta, Tiktok and other apps that have you mindless.</li>
-                        <li>Replace your subscriptions.</li>
+                        <li>Escape the infinite scroll algorithms.</li>
+                        <li>Cancel your subscriptions. Replace apps with open-source or self-hosted alternatives.</li>
                         <li>Self-host as much as humanly possible.</li>
                         <li>Contribute to Open Source, EFF, IEEE, Wikipedia, Internet Archive.</li>
                         <li>Contact your representatives.</li>
-                    </ul><br/><br/>
-                    <p>There’s so much you can do to impede your loss of privacy and to promote a more privacy-centric perspective within our community. There’s so much you can do to contribute to freedom, to privacy, to consumer protections. It starts with learning, and building, and doing something.</p>
+                    </ul>
                 </div>
                 <div className={styles.ManifestoBody}>
-                <h3>&gt;Embrace Clippy</h3>
+                    <h3>&gt;Embrace Clippy</h3>
 
-                <p>Clippy just wanted to help.<br/>
-                <br/>
-                Clippy didn’t track you across the city. <br/>Clippy didn’t collect and sell data on who enters or exits your home. <br/>Clippy didn’t collect and sell data on your web traffic, texts, emails, phone calls. <br/>Clippy didn’t try to decide which advertisements to serve you. <br/>Clippy didn’t ask for age verification, ID, or your location. <br/>Clippy didn’t have ulterior motives, he just wanted to help.<br/>
-                <br/>
-                Embrace Clippy by changing your profile picture across every service to a Clippy.</p>
+                    <p>Clippy just wanted to help.<br/>
+                    <br/></p>
+                    <p>Clippy didn't track you across the city. <br/></p>
+                    <p>Clippy didn't collect and sell data on who enters or exits your home. <br/></p>
+                    <p>Clippy didn't collect and sell data on your web traffic, texts, emails, phone calls. <br/></p>
+                    <p>Clippy didn't try to decide which advertisements to serve you. <br/></p>
+                    <p>Clippy didn't ask for age verification, ID, or your location. <br/></p>
+                    <p>Clippy didn't have ulterior motives, he just wanted to help.<br/></p>
+                    <br/>
+                    <p>Embrace Clippy by changing your profile picture across every service to a Clippy.</p>
                 </div>
                 <div className={styles.ManifestoBody }>
                     <h3>&gt;Call your Representatives</h3>
 
-                    <p>Phone calls are the most effective way to influence your representatives. <br/><br/>Here’s why:</p>
+                    <p>Phone calls are the most effective way to influence your representatives. <br/><br/>Here's why:</p>
                     <ul>
                         <li>Detailed Logs: Staffers log every call by topic, location, and zip code.</li>
                         <li>Daily Reports: Senior staff compile reports on the top issues being called about each day.</li>
