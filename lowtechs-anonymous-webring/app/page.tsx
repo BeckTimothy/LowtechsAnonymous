@@ -39,7 +39,8 @@ export default function Home() {
         //convert date to string and return shortened string
         let str = lastThursday.toString();
         let arr = str.split(' ').slice(0,5);
-        return arr.join(' ');
+	return "TBA"
+	//return arr.join(' ');
     };
     const getTagLine = () =>{
         const options = [
