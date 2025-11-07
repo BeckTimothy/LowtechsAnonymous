@@ -38,9 +38,21 @@ export default function Home() {
         }
         //convert date to string and return shortened string
         let str = lastThursday.toString();
+	
+	console.log(new Date(2025, 10, 20, 18))
+	if(today < new Date(2025, 10, 20, 18)){
+		str = new Date(2025, 10, 20, 18);
+		str = str.toString();
+	}else if(today < new Date(2025, 11, 18, 18) ){
+		str = new Date(2025, 11, 18, 18);
+		str = str.toString();
+	}
+
+
+
         let arr = str.split(' ').slice(0,5);
-	return "TBA"
-	//return arr.join(' ');
+	//return "TBA"
+	return arr.join(' ');
     };
     const getTagLine = () =>{
         const options = [
@@ -76,6 +88,8 @@ export default function Home() {
                         Do <i>YOU</i> have an <a href="/discord" rel="nofollow" className={styles.inviteLink}>invite?</a>
                     </p>
                 </main>
+
+		{ /*
 		<a href="/clippy" className={styles.ClippyBannerWrapper}>
             	    <div className={styles.ClippyRejectWrapper}>
                	 	<h3 className={styles.ClippyTitleText}>Reject Modernity</h3>
@@ -85,7 +99,7 @@ export default function Home() {
                	 	<h3 className={styles.ClippyTitleText2}>Embrace Clippy&nbsp;&nbsp;</h3>
             	    </div>
 	        </a>
-
+		*/}
             </div>
         </div>
     );
