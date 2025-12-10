@@ -41,11 +41,9 @@ export default function Home() {
 	
 	console.log(new Date(2025, 10, 20, 18))
 	if(today < new Date(2025, 10, 20, 18)){
-		str = new Date(2025, 10, 20, 18);
-		str = str.toString();
+		str = new Date(2025, 10, 20, 18).toString();
 	}else if(today < new Date(2025, 11, 18, 18) ){
-		str = new Date(2025, 11, 18, 18);
-		str = str.toString();
+		str = new Date(2025, 11, 18, 18).toString();
 	}
 
 
