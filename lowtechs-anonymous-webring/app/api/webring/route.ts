@@ -108,7 +108,6 @@ async function updateWebring(client: any, json: SiteObject[]) {
 export async function GET() {
     const client = await db.connect();
     try {
-
         await client.query(`BEGIN`);
         const json: SiteObject[] = await getSites(client);
         await updateWebring(client, json)
