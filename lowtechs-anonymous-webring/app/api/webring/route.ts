@@ -108,6 +108,12 @@ async function updateWebring(client: any, json: SiteObject[]) {
 export async function GET() {
     const client = await db.connect();
     try {
+
+        await client.query(`BEGIN`);
+        const json: SiteObject[] = await getSites(client);
+        await updateWebring(client, json)
+        await client.query(`COMMIT`);
+
         return Response.json(await getSites(client));
     } catch (error: unknown) {
         console.error('Seeding failed:', error);

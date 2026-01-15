@@ -38,17 +38,6 @@ export default function Home() {
         }
         //convert date to string and return shortened string
         let str = lastThursday.toString();
-	
-	console.log(new Date(2025, 10, 20, 18))
-	if(today < new Date(2025, 10, 20, 18)){
-		str = new Date(2025, 10, 20, 18);
-		str = str.toString();
-	}else if(today < new Date(2025, 11, 18, 18) ){
-		str = new Date(2025, 11, 18, 18);
-		str = str.toString();
-	}
-
-
 
         let arr = str.split(' ').slice(0,5);
 	//return "TBA"
@@ -85,7 +74,7 @@ export default function Home() {
                         <br/>
                         {getNextAlaEvent().toString()}
                         <br/><br/>
-                        Do <i>YOU</i> have an <a href="/discord" rel="nofollow" className={styles.inviteLink}>invite?</a>
+                        Do <i>YOU</i> have an <a href="/event" rel="nofollow" className={styles.inviteLink}>invite?</a>
                     </p>
                 </main>
 
