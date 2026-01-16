@@ -487,6 +487,7 @@ a.secondary {
   position: fixed;
   top: -100px;
   left: 0;
+  pointer-events: none;
   animation: scanline 7s linear infinite;
 }
 @keyframes scanline {
